@@ -206,7 +206,8 @@ body {
 .list-item--title {
     background-color: var(--color-accent);
     padding: 0.5em 1em;
-    width: 100%
+    width: 100%;
+    cursor: pointer;
 }
 
 .list-item--title p {
@@ -214,6 +215,31 @@ body {
     font-weight: 400;
     font-size: calc(var(--fs-body)*0.8);
 }
+
+
+
+/* ///////////-------Footer--------////////////// */
+.footer-container {
+    font-family: var(--font-family-body);
+    padding: 5em;
+    background-color: var(--color-primary-dark);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-secondary);
+    letter-spacing: 1.2px;
+}
+
+.name {
+    text-decoration: none;
+    color: var(--color-accent);
+    font-weight: 700;
+    cursor: pointer;
+}
+
+
+
 
 /* //////////------Component--------//////// */
 .bg-normal {
@@ -268,6 +294,8 @@ body {
 
 
 
+
+
 /* /////////////---------Media Query------///////// */
 
 @media (max-width: 900px) {
@@ -287,6 +315,13 @@ body {
         font-size: 0.6rem;
     }
     .list-item--number {
-        min-width: 50px ;
+        min-width: 45px ;
     }
+}
+
+
+/* ///////-----Extra------/////// */
+::selection {
+    background-color: var(--color-primary);
+    color: var(--color-accent);
 }
