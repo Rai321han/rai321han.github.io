@@ -282,8 +282,11 @@ body {
     }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 450px) {
     html {
         font-size: 0.6rem;
+    }
+    .list-item--number {
+        min-width: 50px;
     }
 }
