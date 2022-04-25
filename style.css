@@ -287,6 +287,6 @@ body {
         font-size: 0.6rem;
     }
     .list-item--number {
-        min-width: 50px;
+        min-width: 50px ;
     }
 }
