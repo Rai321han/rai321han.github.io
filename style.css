@@ -104,7 +104,7 @@ body {
 
 .nav-container a {
   color: var(--color);
-  font-size: calc(var(--fs-body) * 0.5);
+  font-size: 14px;
   letter-spacing: 1.2px;
   text-decoration: none;
   text-transform: uppercase;
