@@ -220,6 +220,7 @@ body {
 
 /* ///////////-------Footer--------////////////// */
 .footer-container {
+    position: relative;
     font-family: var(--font-family-body);
     padding: 5em;
     background-color: var(--color-primary-dark);
@@ -229,6 +230,19 @@ body {
     align-items: center;
     color: var(--color-secondary);
     letter-spacing: 1.2px;
+}
+
+.image-holder {
+    top:0;
+    transform: translateY(-50%);
+    position: absolute;
+    background-image: url(Img/Author-image.jpg);
+    background-position: center;
+    background-size: cover;
+    width: 10em;
+    height: 10em;
+    border: solid 0.8em var(--color-primary-dark);
+    border-radius: 100%;
 }
 
 .name {
