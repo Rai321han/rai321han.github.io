@@ -6,6 +6,14 @@
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: "Racing Sans One";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Racing Sans One"),
+    url("Fonts/racing-sans-one/RacingSansOne-Regular.woff") format("woff");
+}
+
 :root {
   --color-primary: #192125;
   --color-primary-light: #4f5b62;
