@@ -43,6 +43,7 @@ body {
   margin: 0;
   position: relative;
   font-family: var(--font-family-body);
+  overflow-x: hidden;
 }
 
 .hero {
@@ -89,13 +90,45 @@ body {
 }
 
 /* //////////-------Navigation--------////////// */
+
+.menu-btn {
+  top: 2em;
+  right: 2em;
+  height: 1em;
+  aspect-ratio: 1;
+  background-color: white;
+  position: fixed;
+  z-index: 9999;
+  display: none;
+}
+
 .nav-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 500ms;
+}
+
+.nav-container[target="false"] {
   position: fixed;
   top: 0;
   width: 100%;
   padding: 1em 0 0.5em 0;
   background-color: var(--color-primary);
   z-index: 1000;
+}
+
+.nav-container[target="true"] {
+  position: absolute;
+  z-index: 899;
+  transform: translateX(0%);
+  background-color: rgba(25, 33, 37, 0.7);
+  width: 60%;
+  height: 100vh;
+  padding-top: min(2vh, 3em);
+  padding-right: 2em;
+  padding-left: 2em;
+  right: 0;
 }
 
 .nav-container ul {
@@ -119,20 +152,20 @@ body {
 }
 
 .nav-container li:hover {
-  transform: translateX(10%);
+  transform: translateY(10%);
   border-bottom: solid 1px var(--color-accent);
   padding-bottom: 2px;
 }
 
 .nav-container li:hover:nth-child(1) {
-  transform: translateX(10%);
+  transform: translateY(10%);
   border-left: solid 1px var(--color-accent);
   border-bottom: 0;
   padding-left: 2px;
 }
 
 .nav-container li:hover:last-child {
-  transform: translateX(10%);
+  transform: translateY(10%);
   border-right: solid 1px var(--color-accent);
   border-bottom: 0;
   padding-right: 2px;
@@ -324,12 +357,48 @@ body {
   }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 550px) {
   html {
     font-size: 0.6rem;
   }
   .list-item--number {
     min-width: 45px;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+
+  .nav-container ul {
+    /* background-color: red; */
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+  }
+
+  .nav-container[target="false"] {
+    transform: translateX(100%);
+    background-color: rgba(25, 33, 37, 0.7);
+    width: 60%;
+    height: 100vh;
+    padding-top: min(2vh, 3em);
+    padding-right: 2em;
+    padding-left: 2em;
+    right: 0;
+  }
+
+  @supports (backdrop-filter: blur(20px)) {
+    .nav-container {
+      backdrop-filter: blur(10px);
+    }
+  }
+
+  .nav-container li:hover:nth-child(n) {
+    transform: translateY(10%);
+    border-left: solid 1px var(--color-accent);
+    border-right: 0;
+    border-bottom: 0;
+    padding: 0 0 0 2px;
   }
 }
 
