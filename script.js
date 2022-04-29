@@ -11,6 +11,7 @@ const nav_container = document.querySelector(".nav-container");
 const openbtn = document.getElementById("openSVG");
 const closebtn = document.getElementById("closeSVG");
 
+/*////////Changing menu button/////////////*/
 const changeButton = function (target) {
   let state1 = "";
   let state2 = "";
