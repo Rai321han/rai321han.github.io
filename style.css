@@ -399,6 +399,10 @@ body {
     gap: 2em;
   }
 
+  .nav-container {
+    border-left: solid 1px var(--color-accent);
+  }
+
   .nav-container[target="false"] {
     transform: translateX(100%);
     background-color: rgba(25, 33, 37, 0.7);
